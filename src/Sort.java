@@ -14,9 +14,11 @@ public class Sort {
                     indexSmaller = j;
             }
 
-            int aux = array[i];
-            array[i] = array[indexSmaller];
-            array[indexSmaller] = aux;
+            if(i != indexSmaller) {
+                int aux = array[i];
+                array[i] = array[indexSmaller];
+                array[indexSmaller] = aux;
+            }
         }
     }
 
