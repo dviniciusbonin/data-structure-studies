@@ -11,6 +11,13 @@ public class Main {
         System.out.println("Before bubble sort method \n" + sort.toString());
         sort.bubbleSort();
         System.out.println("After bubble sort method \n" + sort.toString());
+
+        System.out.println("\n");
+        sort.setArray(generateRandomArray());
+
+        System.out.println("Before insertion sort method \n" + sort.toString());
+        sort.insertionSort();
+        System.out.println("After insertion sort method \n" + sort.toString());
     }
 
     public static int[] generateRandomArray() {

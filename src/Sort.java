@@ -36,6 +36,17 @@ public class Sort {
         }
     }
 
+    public void insertionSort() {
+        int newArray[] = new int[array.length], i, j;
+        for (i = 0; i < array.length; i++) {
+            for (j = i; j > 0 && array[i] < newArray[j-1]; j--)
+                newArray[j] = newArray[j-1];
+
+            newArray[j] = array[i];
+        }
+        setArray(newArray);
+    }
+
     @Override
     public String toString() {
         String result = "";
