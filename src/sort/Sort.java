@@ -10,20 +10,24 @@ public class Sort {
         this.array = array;
     }
     public void selectionSort() {
+        int c = 0, t = 0;
         for (int i=0; i < array.length - 1; i++) {
             int indexSmaller = i;
 
             for(int j=i+1; j < array.length; j++) {
+                c++;
                 if(array[indexSmaller] > array[j])
                     indexSmaller = j;
             }
 
             if(i != indexSmaller) {
+                t++;
                 int aux = array[i];
                 array[i] = array[indexSmaller];
                 array[indexSmaller] = aux;
             }
         }
+        System.out.println("comparacoes = " + c + "trocas = " + t);
     }
 
     public void bubbleSort() {
